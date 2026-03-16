@@ -14,7 +14,7 @@ class PriceService:
     
     async def fetch_save_price(self):
         """
-        Метод запрашивает цены для нужных тикеров и сохраняет их в БД.
+        Метод запрашивает цены для нужных тикеров и сохраняет их в БД
         """
         tickers = ["btc_usd", "eth_usd"] # Нужные тикеры
 
@@ -30,7 +30,7 @@ class PriceService:
                     timestamp = int(time.time())
                 )
                 # Сохранение в БД
-                await self.repo.save_price(price_data)
+                await self.repo.save_price(ticker=price_data.ticker, price=price_data.price)
                 logger.info(f"Сохранена цена для {ticker}: {price_value}")
             else:
                 logger.info(f"Нет данных для {ticker}")

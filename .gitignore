@@ -1,12 +1,14 @@
+# Окружение и секреты
 .env
-
 .venv/
 
+# Кэш Python
 __pycache__/
 
+# Настройки IDE 
 .vscode/
 .idea/
 
+# Логи и тесты
 *.log
-
-.dockerignore
+.pytest_cache/

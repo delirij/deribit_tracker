@@ -1,0 +1,15 @@
+# Виртуальное окружение
+.venv
+
+# Кэш
+__pycache__
+.pytest_cache
+
+.env
+
+# Гит и докер настройки 
+.git
+.gitignore
+docker-compose.yml
+Dockerfile
+
